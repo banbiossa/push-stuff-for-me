@@ -14,6 +14,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      
+      - name: do stuff
+        run: |
+          echo "# Do something to README.md by github actions ${{ github.sha }}" >> README.md
 
       - name: Commit and push
         env: 
