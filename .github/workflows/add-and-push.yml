@@ -1,6 +1,7 @@
 name: push_stuff_for_you
 
 on:
+  push:
   pull_request:
     paths:
       - README.md
@@ -11,7 +12,7 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       
